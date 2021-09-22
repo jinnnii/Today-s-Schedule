@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    margin:0;
+    background: rgb(218,218,218);
+    background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(226,193,193,1) 100%);
+}
+.body{
+    padding: 50px;
+    margin : 5% auto;
+    width:80%;
+    min-width: 400px;
+    border-radius: 50px;
+    box-shadow: 0px 9px 14px -3px rgba(0,0,0,0.41);
+    background-color: white;
+    opacity: 90%;
+    font-family: 'IM_Hyemin-Regular';
+}
+li,ul{
+    list-style :none;
+    padding: 0;
+}
+h1,h3{
+    margin : 0;
+    font-family: 'IM_Hyemin-Bold';
+}
+
+h1{
+    color: midnightblue;
+}
+
+button{
+    border : none;
+    background: none;
+    cursor : pointer;
+
+}
+
+article{
+    height : 350px;
+    margin: 50px 0;
+}
+article input[type=checkbox]{
+    display: none;
+}
+
+article .todo{
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+}
+
+article .todo_check{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #b8bfcc;
+    box-shadow: 0 2px 3px #F0F4F8;
+}
+article .todo label{
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+    padding: 5px 15px;
+}
+article .todo_tag_name{
+    margin-left : 30px;
+    display: flex;
+    align-items: center;
+}
+article .todo_tag_name{
+    font-weight: bold;
+}
+article .todo_tag{
+    font-weight: normal;
+    margin-right: 10px;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background-color: red;
+    border-radius: 15px;
+    color:white;
+}
+
+article .todo_delete{
+    font-size: 1em;
+    transition: all 300ms ease-in;
+}
+article .todo_delete:hover{
+    color: red;
+    transform: scale(1.1);
+}
+footer{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+footer .footer_input{
+    width:100%;
+    height: 32px;
+    padding:0 16px;
+    margin: 0 5px;
+    font-size: 1em;
+    font-family: 'IM_Hyemin-Regular';
+    font-weight:bold;
+    border: none;
+    outline: none;
+}
+footer .footer_button{
+    font-size: 1em;
+    vertical-align: middle;
+    transition: all 300ms ease-in;
+}
+
+footer .footer_button:hover {
+    transform: scale(1.1);
+}

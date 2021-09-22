@@ -8,8 +8,10 @@
     <title>Today's Schedule</title>
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/checkbox.css">
 
     <script src="script/main.js" defer></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="script/tag.js" defer></script>
 
     <!--Font Awesome -->
@@ -23,7 +25,51 @@
 </head>
 
 <body>
+    <section class="body">
+        <header>
+            <h1>Today's Schedule</h1>
+            <h3>2021.9.19 일요일</h3>
+        </header>
+        <article>
+            <ul class="todos">
+                <li class="todo_row">
+                    <div class="todo">
+                        <input type="checkbox" name="check" id="todo_1">
+                        <label for="todo_1">
+                            <span class="todo_check"></span>
+                            <div class="todo_tag_name">
+                                <span class="todo_tag">장보기</span>
+                                <span class="todo_name">마트가서 계란 사오기</span>
+                            </div>
+                        </label>
+                        <button class="todo_delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </li>
 
+            </ul>
+        </article>
+        <footer>
+            <div class="dropdown">
+                <div class="tag_select">
+                    <span>None</span>
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <input type="hidden" name="tag">
+                <ul class="dropdown-menu">
+                    <li id="tag_1">장보기</li>
+                    <li id="tag_2">스터디</li>
+                    <li id="tag_3">asdfdfasf</li>
+                    <li id="tag_4">스터asdfaffasdfadfa디</li>
+                </ul>
+            </div>
+            <input type="text" class="footer_input">
+            <button class="footer_button">
+                <i class="fas fa-plus"></i>
+            </button>
+        </footer>
+    </section>
 </body>
 
 </html>

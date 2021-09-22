@@ -1,0 +1,76 @@
+.dropdown {
+    white-space: nowrap;
+    max-width: 100px;
+    background-color: red;
+    border-radius: 15px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    font-size: 0.8em;
+    color: white;
+}
+.dropdown .tag_select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.dropdown .tag_select span{
+    margin-right: 5px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.dropdown .tag_select > i {
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    line-height: 20px
+}
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+.dropdown:active {
+    background-color: #f8f8f8
+}
+.dropdown.active:hover,
+.dropdown.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8;
+    color:#474747;
+}
+.dropdown.active .tag_select > i {
+    transform: rotate(-90deg);
+    color:#474747;
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+    z-index: 9;
+}
+.dropdown .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    overflow:hidden;
+    text-overflow: ellipsis;
+} 
+.dropdown .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+.dropdown .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+.dropdown .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
