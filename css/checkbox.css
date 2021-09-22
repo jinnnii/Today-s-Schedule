@@ -3,16 +3,20 @@ input[type=checkbox]+label:hover {
     background-color: #F4F7FA;;
     border-radius: 30px;
 }
-input[type=checkbox]+label{
+input[type=checkbox]+label .todo_name, .todo_tag{
     transition : all 300ms ease-in;
 }
 
 input[type=checkbox]:checked+label .todo_name{
-    color: #AEB7C6;
+    color: #6e7074;
     text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #6e7074;
+    
 }
 
 input[type=checkbox]:checked+label .todo_tag {
+    animation: pulse;
     background-color: #AEB7C6;
     color:white;
 }
