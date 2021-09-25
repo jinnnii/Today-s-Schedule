@@ -1,0 +1,26 @@
+@media (max-width:400px){
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer .footer_input {
+        margin: 10px;
+        padding:5px;
+        background-color:#F4F7FA;
+        border-radius: 5px;
+
+    }
+    footer .dropdown{
+        align-self:flex-start;
+    }
+
+    footer .footer_button{
+        align-self: flex-end;
+    }
+
+    .input_massage{
+        text-align: left;
+        position:relative;
+        top:-25px;
+    }
+}

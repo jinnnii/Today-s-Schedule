@@ -7,55 +7,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's Schedule</title>
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/mobile-s.css">
+    <link rel="stylesheet" href="css/desctop.css">
     <link rel="stylesheet" href="css/tag.css">
     <link rel="stylesheet" href="css/checkbox.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="script/main.js" defer></script>
+    <script src="script/calendar.js" defer></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="script/tag.js" defer></script>
 
     <!--Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/animations.css">
     <!--Animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!--emoji picker-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js" defer></script>
 </head>
 
-<body>
+<body class="light">
     <section class="body">
-        <header>
-            <h1>Today's Schedule</h1>
-            <h3>2021.9.19 일요일</h3>
-        </header>
-        <article>
-            <ul class="todos">
-                <!--todo_row-->
-            </ul>
-        </article>
-        <footer>
-            <div class="dropdown">
-                <div class="tag_select">
-                    <span>None</span>
-                    <i class="fa fa-chevron-left"></i>
-                </div>
-                <input type="hidden" name="tag">
-                <ul class="dropdown-menu">
-                    <li id="tag_1">장보기</li>
-                    <li id="tag_2">스터디</li>
-                    <li id="tag_3">💪</li>
-                    <li id="tag_4">스터asdfaffasdfadfa디</li>
-                </ul>
+        <aside class="left_side animate__animated animate__fadeIn">
+            <div class="profile">
+                <img src="img/profile.jpg" alt="" class="">
+                <span>Kim Eun Jin</span>
             </div>
-            <input type="text" class="footer_input">
-            <button class="footer_button">
-                <i class="fas fa-plus"></i>
-            </button>
-        </footer>
-        <span class="input_massage">
-            <p></p>
-        </span>
+
+            <div class="aside_box progress">
+                <h3>Tag Progress</h3>
+                <div class="progress_tags">
+                    <div class="progress_tag">
+                        <p data-id="tag_0">스터디</p>
+                        <div class="progress_base"></div>
+                        <div class="progress_bar stretchRight"></div>
+                    </div>
+                    <div class="progress_tag">
+                        <p data-id="tag_1">심부름</p>
+                        <div class="progress_base"></div>
+                        <div class="progress_bar stretchRight"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside_box add_tag">
+                <h3>Add Tag</h3>
+                <div class="tags">
+                    <span data-id="tag_0">
+                        <p class="tag_name">스도노ddddddddd는개개개개같은스터디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">🔥</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">스터디디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">스터디스터디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">스개개개디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">개같은스터디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <span data-id="tag_0">
+                        <p class="tag_name">개같은스터디</p>
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+                <div class="add_form">
+                    <input type="text" class="input_tag" placeholder="ADD Tag">
+                    <button class="input_button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <section class="center">
+            <header>
+                <div class="title">
+                    <h1>Today's Schedule</h1>
+                    <h3>2021.9.19 일요일</h3>
+                </div>
+                <div class="emoji">
+                    <emoji-picker class="light" skin-tone-emoji=""></emoji-picker>
+                    <div class="emoji_mood">
+                        <p class="tossing"></p>
+                    </div>
+                </div>
+            </header>
+            <article>
+                <ul class="todos">
+                    <!--todo_row-->
+                </ul>
+            </article>
+            <footer>
+                <div class="dropdown">
+                    <div class="tag_select">
+                        <span>None</span>
+                        <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="tag">
+                    <ul class="dropdown-menu">
+                        <li id="tag_1">장보기</li>
+                        <li id="tag_2">스터디</li>
+                        <li id="tag_3">💪</li>
+                        <li id="tag_4">스터asdfaffasdfadfa디</li>
+                    </ul>
+                </div>
+                <input type="text" class="footer_input">
+                <button class="footer_button">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </footer>
+            <span class="input_massage">
+                <p></p>
+            </span>
+        </section>
+        <aside class="right_side animate__animated animate__fadeIn ">
+            <div class="time aside_box">
+                <h1>08:23 AM</h1>
+                <h3></h3>
+            </div>
+
+
+            <div class="calendar">
+                <div class="calendar-box">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">
+                            February
+                        </span>
+
+                        <div class="year-picker">
+                            <span class="year-change prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change next">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>S</div>
+                            <div>M</div>
+                            <div>T</div>
+                            <div>W</div>
+                            <div>T</div>
+                            <div>F</div>
+                            <div>S</div>
+                        </div>
+                        <div class="calendar-days">
+                        </div>
+                    </div>
+
+                    <div class="calendar-footer">
+                        <div class="toggle">
+                            <span>Dark Mode</span>
+                            <div class="dark-mode-switch">
+                                <div class="dark-mode-switch-ident"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="month-list"></div>
+                </div>
+            </div>
+        </aside>
     </section>
 </body>
 
