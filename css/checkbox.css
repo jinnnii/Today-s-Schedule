@@ -1,7 +1,7 @@
 input[type=checkbox]+label:hover {
     color: #353A42;
     background-color: #F4F7FA;;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 input[type=checkbox]+label .todo_name, .todo_tag{
     transition : all 300ms ease-in;
