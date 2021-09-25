@@ -3,12 +3,7 @@ const input = document.querySelector('.footer_input');
 const tag = document.querySelector('.tag_select span');
 const addBtn = document.querySelector('.footer_button');
 
-let id = 0;
-
-function onApp() {
-    setDate();
-}
-onApp();
+let count = 0;
 
 function onAdd() {
     const text = input.value;
@@ -27,6 +22,13 @@ function onAdd() {
         msg.innerHTML = `<p></p>`;
     }
     const todo = createTodo(text, tagText);
+    const todoDelete = todo.querySelector('.todo_delete');
+    todoDelete.addEventListener('click', () => {
+        todo.classList.add('animate__animated', 'animate__fadeOut');
+        todo.addEventListener('animationend', () => {
+            todos.removeChild(todo);
+        });
+    });
     todos.appendChild(todo);
 
     todo.scrollIntoView({ block: 'center' });
@@ -36,47 +38,27 @@ function onAdd() {
 
 function createTodo(text, tagText) {
     const todoRow = document.createElement('li');
-    todoRow.setAttribute('class', 'todo_row');
-    todoRow.setAttribute('data-id', id);
+    todoRow.setAttribute('class', 'item_row');
 
     const todo = `
         <div class="todo animate__animated animate__fadeInUp">
-            <input type="checkbox" name="check" id="todo_${id}">
-            <label for="todo_${id}">
+            <input type="checkbox" name="check" id="todo_${count}">
+            <label for="todo_${count}">
                 <span class="todo_check"></span>
                 <div class="todo_tag_name">
                     <span class="todo_tag">${tagText}</span>
                     <span class="todo_name">${text}</span>
                 </div>
             </label>
-            <button class="todo_delete hvr-pulse-shrink">
-                <i class="far fa-trash-alt" data-id="${id}"></i>
+            <button class="todo_delete">
+                <i class="far fa-trash-alt"></i>
             </button>
         </div>
     `;
     todoRow.innerHTML = todo;
 
-    id++;
+    count++;
     return todoRow;
-}
-
-function onAddTag() {
-    const tag_input = document.querySelector('.input_tag');
-    const text = tag_input.value;
-}
-
-function setDate() {
-    let day_array = new Array('월', '화', '수', '목', '금', '토', '일');
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const date = today.getDate();
-    const day = day_array[today.getDay()];
-
-    document.querySelector('.center h3').innerHTML = `
-        ${year}.${month}.${date}.${day}요일
-    `;
-
 }
 
 addBtn.addEventListener('click', () => {
@@ -89,15 +71,3 @@ input.addEventListener('keypress', event => {
     }
 })
 
-todos.addEventListener('click', (event) => {
-    if (event.target.tagName === 'I') {
-        const id = event.target.dataset.id;
-        if (id) {
-            const toBeDelete = document.querySelector(`.todo_row[data-id="${id}"]`);
-            toBeDelete.classList.add('animate__animated', 'animate__fadeOut');
-            toBeDelete.addEventListener('animationend', () => {
-                todos.removeChild(toBeDelete);
-            });
-        }
-    }
-});

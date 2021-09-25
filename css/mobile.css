@@ -4,148 +4,58 @@
     font-weight: normal;
     font-style: normal;
 }
-
-/*@font-face {
-    font-family: 'RixYeoljeongdo_Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}*/
 @font-face {
-    font-family: 'SBAggroL';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'SBAggroM';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SBAggroB';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body{
-    margin: 0;
-    padding : 5%;
+    margin:0;
     background: rgb(218,218,218);
     background: linear-gradient(90deg, rgba(218,218,218,1) 0%, rgba(226,193,193,1) 100%);
-    -ms-user-select: none; 
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    color:var(--color-txt);
-}
-.left_side,.right_side{
-    display:none;
 }
 .body{
-    margin : 0 auto;
-    max-width: 1200px;
-    min-width: 200px;
+    padding: 40px 20px;
+    margin : 5% auto;
+    width:80%;
+    min-width: 400px;
     border-radius: 30px;
     box-shadow: 0px 9px 14px -3px rgba(0,0,0,0.41);
     background-color: white;
     opacity: 90%;
-    font-family: 'IM_Hyemin-Bold';
-}
-
-.center{
-    padding: 40px 20px;
-    position:relative;
+    font-family: 'IM_Hyemin-Regular';
 }
 li,ul{
     list-style :none;
     padding: 0;
 }
 h1,h3{
-    margin : 5px 15px;
+    margin : 0 15px;
+    text-align:center;
 }
 
 h1{
-    font-family:  'SBAggroB';
+    color: midnightblue;
+    font-family:fantasy;
 }
 h3{
-    font-size: 0.9em;
-    font-weight: normal;
+    font-size: 1em;
 }
-
 p{
     margin:0;
 }
 
 i{
-    font-size: 1em;
+    width: 1em;
+    height: 1em;
 }
 
 button{
-    all:unset;
-    padding:0;
-    cursor:pointer;
-    display:flex;
-}
-
-input{
-    font-family: 'SBAggroL';
-    border: none;
-    outline: none;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-}
-
-header .emoji_mood{
-    font-size: 1.5em;
-    text-align: center;
-    line-height:50px;
-    background-color:#F0F4F8;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 300ms ease-out;
-}
-
-header .emoji_mood:hover{
-    transform:scale(1.1);
-}
-
-header .emoji_mood:active{
-    background-color:midnightblue;
-}
-emoji-picker{
-    display:none;
-    position:absolute;
-    --background: var(--bg-main);
-    --emoji-size: 1em;
-    --emoji-padding: 0.3em;
-    --outline-color: transparent;
-    --input-font-size: 0.9em;
-    --input-border-color: transparent;
-    width: 300px;
-    height: 250px;
-
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.18); 
-    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.18);
-
-    top: 15%;
-    right: 5%;
-    z-index: 1;
-}
-
-@media screen and (max-width: 320px) {
-    emoji-picker {
-        --num-columns: 4;
-        --category-emoji-size: 1.125rem;
-    }
+    border : none;
+    background: none;
+    cursor : pointer;
+    padding:0px;
 }
 
 article{
@@ -164,9 +74,8 @@ article input[type=checkbox]{
 
 article .todo{
     display: flex;
-    position:relative;
     justify-content: space-between;
-    align-items: center;
+    position:relative;
 }
 
 article .todo_check{
@@ -179,19 +88,24 @@ article .todo_check{
     box-shadow: 0 2px 3px #F0F4F8;
 }
 article .todo label{
+    display: flex;
+    align-items: center; 
     cursor: pointer;
     padding: 5px 15px;
 }
 article .todo_tag_name{
     margin-left : 30px;
-    word-break: break-all;
+    display: flex;
+    align-items: center;
 }
-article .todo_name{
-    font-size: 0.9em;
+article .todo_tag_name{
+    font-weight: bold;
 }
 article .todo_tag{
-    font-size: 0.7em;
-    padding: 3px 10px;
+    font-weight: normal;
+    margin-right: 10px;
+    font-size: 0.8em;
+    padding: 5px 10px;
     background-color: red;
     border-radius: 15px;
     color:white;
@@ -200,27 +114,29 @@ article .todo_tag{
 article .todo_delete{
     font-size: 1em;
     margin: 0 15px;
+    transition: all 300ms ease-in;
 }
 article .todo_delete:hover{
     color: red;
+    transform: scale(1.1);
 }
-
-
 footer{
     display:flex;
     height: 36px;
     align-items: center;
     margin: 0 15px;
 }
-
 footer .footer_input{
-    font-weight:bold;
+    
+    height:100%;
     padding:0 16px;
     font-size: 1em;
-    width: 100%;
-    height:100%;
+    font-family: 'IM_Hyemin-Regular';
+    flex-grow: 1;
+    font-weight:bold;
+    border: none;
+    outline: none;
 }
-
 footer .footer_button{
     font-size: 1.2em;
     border-radius: 5px;
@@ -228,6 +144,11 @@ footer .footer_button{
 
 footer .footer_button:hover {
     animation: animation 1000ms linear both;
+}
+
+footer .footer_button i{
+    height: 1em;
+    width:1em;
 }
 
 .input_massage{
@@ -239,5 +160,35 @@ footer .footer_button:hover {
 .input_massage p{
     height: 18px;
     margin: 10px 20px;
+}
+
+
+@keyframes animation { 
+    0% { transform: matrix3d(1, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    3.4% { transform: matrix3d(1.063, 0, 0, 0, 0, 1.422, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    4.7% { transform: matrix3d(1.09, 0, 0, 0, 0, 1.488, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    6.81% { transform: matrix3d(1.132, 0, 0, 0, 0, 1.523, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    9.41% { transform: matrix3d(1.177, 0, 0, 0, 0, 1.452, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    10.21% { transform: matrix3d(1.188, 0, 0, 0, 0, 1.414, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    13.61% { transform: matrix3d(1.225, 0, 0, 0, 0, 1.227, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    14.11% { transform: matrix3d(1.228, 0, 0, 0, 0, 1.201, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    17.52% { transform: matrix3d(1.242, 0, 0, 0, 0, 1.064, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    18.72% { transform: matrix3d(1.242, 0, 0, 0, 0, 1.034, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    21.32% { transform: matrix3d(1.239, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    24.32% { transform: matrix3d(1.23, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    25.23% { transform: matrix3d(1.227, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    29.03% { transform: matrix3d(1.213, 0, 0, 0, 0, 1.066, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    29.93% { transform: matrix3d(1.21, 0, 0, 0, 0, 1.085, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    35.54% { transform: matrix3d(1.196, 0, 0, 0, 0, 1.202, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    36.74% { transform: matrix3d(1.194, 0, 0, 0, 0, 1.221, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    41.04% { transform: matrix3d(1.192, 0, 0, 0, 0, 1.261, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    44.44% { transform: matrix3d(1.193, 0, 0, 0, 0, 1.261, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    52.15% { transform: matrix3d(1.198, 0, 0, 0, 0, 1.214, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    59.86% { transform: matrix3d(1.201, 0, 0, 0, 0, 1.187, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    63.26% { transform: matrix3d(1.201, 0, 0, 0, 0, 1.187, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    75.28% { transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    85.49% { transform: matrix3d(1.2, 0, 0, 0, 0, 1.201, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    90.69% { transform: matrix3d(1.2, 0, 0, 0, 0, 1.201, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+    100% { transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
 
