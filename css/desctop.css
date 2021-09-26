@@ -8,12 +8,11 @@
 
     .left_side, .right_side{
         background-color:var(--bg-main);
-        width: 20%;
+        width: 25%;
         max-width:300px;
         display: inline-block;
         padding: 40px 0;
     }
-
     .left_side{
         border-radius: 30px 0 0 30px;
     }
@@ -24,7 +23,8 @@
     }
     .right_side{
         border-radius: 0 30px 30px 0;
-        width:30%;
+        background-color:var(--color-hover);
+        width:25%;
     }
 
     .profile{
@@ -50,11 +50,15 @@
 
     .aside_box{
         background-color: var(--bg-main);
-        width: 70%;
+        width: 85%;
         padding :5%;
         border-radius: 15px;
         margin: 30px auto;
     }
+
+    /*.light .aside_box{
+        box-shadow: var(--shadow);
+    }*/
     .progress_tags{
         position: relative;
         max-height: 150px;
@@ -103,11 +107,11 @@
         align-items: center;
         background-color:midnightblue;
         color: white;
-        text-align: center;;
+        text-align: center;
         margin: 3px 2px;
-        padding: 2px 7px;
-        font-size: 0.8em;
-        border-radius: 10px;
+        padding: 5px 7px;
+        font-size: 0.7em;
+        border-radius: 15px;
         cursor: pointer;
         transition: all 300ms ease-in;
     }
@@ -116,7 +120,6 @@
         max-width: 300px;
         overflow: hidden;
         white-space : nowrap;
-        text-overflow: ellipsis;
         font-family: 'IM_Hyemin-Bold';
     }
     .add_tag .tags span i{
@@ -136,15 +139,12 @@
         display:flex;
         align-items: center;
         margin: 10px 0;
-        background-color:  #F4F7FA;
         border-radius: 15px;
         padding: 5px 10px;
-        font-size: 0.8em;
     }
 
     .add_tag input{
         width:100%;
-        background-color: transparent;
     }
 
     .add_tag .input_button i{
@@ -158,12 +158,41 @@
 
     /*right-aside*/
     .right_side .aside_box{
-        background-color : #F4F7FA;
+        width: 70%;
+        background-color : var(--bg-main);
         margin-top:0;
-        padding: 30px 0;
+        padding: 10%;
+        text-align: center;
     }
+
     .right_side .aside_box h1{
         margin: 0;
-        text-align: center;
+        padding: 10% 0;
+    }
+
+    .right_side .weather-container {
+        margin-top:5%;
+        display:flex;
+        justify-content: center;
+        font-size: 0.9em;
+    }
+    .right_side .weather-container span{
+        margin:0;
+        color:var(--bg-second);
+        margin-left: 10px;
+        font-size: 0.8em;
+    }
+    .right_side .weather-container .icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .right_side .weather-temp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--title-font-family);
+        animation: to-top 1s forwards;
+        height: 30px;
+        font-size: 0.8em;
     }
 }

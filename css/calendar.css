@@ -11,15 +11,11 @@
     display: grid;
     place-items: center;
     background-color: var(--bg-main);
-    border-radius: 30px;
+    border-radius: 15px;
     position: relative;
     padding:5%;
     margin: auto;
 
-}
-
-.light .calendar-box {
-    box-shadow: var(--shadow);
 }
 
 .calendar-header {
@@ -69,6 +65,11 @@
     cursor: pointer;
     overflow:hidden;
     animation: to-top 1s forwards;
+}
+
+.calendar-days div.active{
+    background-color:var(--blue);
+    color:white;
 }
 
 .calendar-days div:hover {
@@ -147,7 +148,7 @@
 }
 
 .calendar-days div.curr-date{
-    background-color:var(--blue);
+    background-color:red;
     color:var(--white);
     border-radius:50%;
 }
@@ -185,13 +186,13 @@
 
 .month-list>div>div{
     width:100%;
-    border-radius: 10px;
     text-align: center;
-    cursor: pointer;
 }
 
-.month-list>div>div:hover{
+.month-list>div:hover{
     background-color:var(--color-hover);
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 @keyframes to-top {

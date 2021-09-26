@@ -11,8 +11,9 @@
     --light-hover: #edf0f5;
     --light-text: #151426;
 
-    --blue: midnightblue;
+    --blue: blue;
     --white: #fff;
+    --yellow: rgb(243, 178, 59);
 
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 

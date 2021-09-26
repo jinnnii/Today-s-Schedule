@@ -5,11 +5,6 @@ const addBtn = document.querySelector('.footer_button');
 
 let id = 0;
 
-function onApp() {
-    setDate();
-}
-onApp();
-
 function onAdd() {
     const text = input.value;
     const tagText = tag.innerHTML;
@@ -63,20 +58,6 @@ function createTodo(text, tagText) {
 function onAddTag() {
     const tag_input = document.querySelector('.input_tag');
     const text = tag_input.value;
-}
-
-function setDate() {
-    let day_array = new Array('월', '화', '수', '목', '금', '토', '일');
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
-    const date = today.getDate();
-    const day = day_array[today.getDay()];
-
-    document.querySelector('.center h3').innerHTML = `
-        ${year}.${month}.${date}.${day}요일
-    `;
-
 }
 
 addBtn.addEventListener('click', () => {

@@ -1,6 +1,6 @@
 input[type=checkbox]+label:hover {
     color: #353A42;
-    background-color: #F4F7FA;;
+    background-color: var(--color-hover);
     border-radius: 10px;
 }
 input[type=checkbox]+label .todo_name, .todo_tag{

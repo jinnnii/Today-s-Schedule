@@ -18,6 +18,7 @@
     <script src="script/calendar.js" defer></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="script/tag.js" defer></script>
+    <script src="script/sql.js"></script>
 
     <!--Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -105,6 +106,7 @@
                     <div class="emoji_mood">
                         <p class="tossing"></p>
                     </div>
+                    <div class="emoji_delete"></div>
                 </div>
             </header>
             <article>
@@ -137,8 +139,16 @@
         </section>
         <aside class="right_side animate__animated animate__fadeIn ">
             <div class="time aside_box">
-                <h1>08:23 AM</h1>
-                <h3></h3>
+                <h1></h1>
+                <div class="weather-container">
+                    <div class="weather-data">
+                        <div class="weather-temp">
+                            <div class="icon"></div>
+                            <div class="current-temp"></div>
+                            <span class="location"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 

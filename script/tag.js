@@ -45,7 +45,6 @@ emoji_picker.addEventListener('emoji-click', (event) => {
     $('emoji-picker').slideUp(300);
 });
 document.addEventListener('click', (event) => {
-    console.log(event.target.className);
     if (emoji_picker.classList.contains('active')) {
         if (event.target.tagName !== 'EMOJI-PICKER'
             && event.target.className !== 'tossing'
